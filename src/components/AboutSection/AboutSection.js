@@ -22,30 +22,30 @@ class AboutSection extends React.Component {
                             <p>Languages:</p>
                         </Grid>
                         <Grid item xs={9} >
-                            <Chip label="Javascript" />
-                            <Chip label="Python" />
-                            <Chip label="C#" />
-                            <Chip label="Dart" />
-                            <Chip label="CSS & SCSS" />
-                            <Chip label="PHP" />
-                            <Chip label="Processing" />
+                            <Chip label="Javascript" size="small" />
+                            <Chip label="Python" size="small" />
+                            <Chip label="C#" size="small" />
+                            <Chip label="Dart" size="small" />
+                            <Chip label="CSS & SCSS" size="small" />
+                            <Chip label="PHP" size="small" />
+                            <Chip label="Processing" size="small" />
                         </Grid>
                         <Grid item xs={3}>
                             <p>Frameworks & Tools:</p>
                         </Grid>
                         <Grid item xs={9} >
-                            <Chip label="Node.js" />
-                            <Chip label="Meteor" />
-                            <Chip label="D3.js" />
-                            <Chip label="Blaze" />
-                            <Chip label="React" />
-                            <Chip label="Bootstrap" />
-                            <Chip label="Material UI" />
-                            <Chip label="AWS EC2 & S3" />
-                            <Chip label="Unity 3D" />
-                            <Chip label="MongoDB" />
-                            <Chip label="BabylonJS & WebGL" />
-                            <Chip label="Git/Github" />
+                            <Chip label="Node.js" size="small" />
+                            <Chip label="Meteor" size="small" />
+                            <Chip label="D3.js" size="small" />
+                            <Chip label="Blaze" size="small" />
+                            <Chip label="React" size="small" />
+                            <Chip label="Bootstrap" size="small" />
+                            <Chip label="Material UI" size="small" />
+                            <Chip label="AWS EC2 & S3" size="small" />
+                            <Chip label="Unity 3D" size="small" />
+                            <Chip label="MongoDB" size="small" />
+                            <Chip label="BabylonJS & WebGL" size="small" />
+                            <Chip label="Git/Github" size="small" />
                         </Grid>
                     </Grid>
                 </Grid>
@@ -66,25 +66,25 @@ class AboutSection extends React.Component {
                     <Grid container>
                         <Grid item xs={4}>
                             <p>Specializations:</p>
-                            <Chip label="Interaction Design" />
-                            <Chip label="Data Visualization" />
-                            <Chip label="Design for Education (K-Professionals)" />
-                            <Chip label="Gameification" />
+                            <Chip label="Interaction Design" size="small" />
+                            <Chip label="Data Visualization" size="small" />
+                            <Chip label="Design for Education (K-Professionals)" size="small" />
+                            <Chip label="Gameification" size="small" />
                         </Grid>
                         <Grid item xs={4} >
                         <p>Tools:</p>
-                            <Chip label="Figma" />
-                            <Chip label="Adobe Illustrator & XD" />
-                            <Chip label="Solidworks" />
-                            <Chip label="3D Studio Max" />
-                            <Chip label="LaTeX" />
+                            <Chip label="Figma" size="small" />
+                            <Chip label="Adobe Illustrator & XD" size="small" />
+                            <Chip label="Solidworks" size="small" />
+                            <Chip label="3D Studio Max" size="small" />
+                            <Chip label="LaTeX" size="small" />
 
                         </Grid>
                         <Grid item xs={4}>
                             <p>Techniques & Processes:</p>
-                            <Chip label="Personas" />
-                            <Chip label="Storyboarding" />
-                            <Chip label="Clickable Prototypes" />
+                            <Chip label="Personas" size="small" />
+                            <Chip label="Storyboarding" size="small" />
+                            <Chip label="Clickable Prototypes" size="small" />
                         </Grid>
                     </Grid>
                 </Grid>
@@ -92,11 +92,11 @@ class AboutSection extends React.Component {
                     <Grid item sm={12} md={4} align='center'>
                         <h3>Research</h3>
                         <Divider variant="fullWidth"></Divider>
-                        <Chip label="Survey Writing" />
-                        <Chip label="Statistical Analysis" />
-                        <Chip label="Clinical Interviews" />
-                        <Chip label="In-situ observation" />
-                        <Chip label="Usability & A/B Testing" />
+                        <Chip label="Survey Writing" size="small" />
+                        <Chip label="Statistical Analysis" size="small" />
+                        <Chip label="Clinical Interviews" size="small" />
+                        <Chip label="In-situ observation" size="small" />
+                        <Chip label="Usability & A/B Testing" size="small" />
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
@@ -104,10 +104,10 @@ class AboutSection extends React.Component {
                         <h3>Research</h3>
                         <Divider variant="fullWidth"></Divider>
                         <Chip label="Survey Writing" />
-                        <Chip label="Statistical Analysis" />
-                        <Chip label="Clinical Interviews" />
-                        <Chip label="In-situ observation" />
-                        <Chip label="Usability & A/B Testing" />
+                        <Chip label="Statistical Analysis" size="small" />
+                        <Chip label="Clinical Interviews" size="small" />
+                        <Chip label="In-situ observation" size="small" />
+                        <Chip label="Usability & A/B Testing" size="small" />
                     </Grid>
                 </Hidden>
 

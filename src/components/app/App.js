@@ -7,6 +7,8 @@ import AboutSection from "../AboutSection/AboutSection";
 import ContactSection from "../ContactSection/ContactSection";
 import ProjectEmberlast from "../Projects/ProjectEmberlast";
 import ProjectHPE from "../Projects/ProjectHPE";
+import Navbar from "../common/Navbar/Navbar"
+import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -54,12 +56,14 @@ export default function App() {
 function Home() {
   return (
         <div className="App">
+          <Navbar/>
           <Container>
             <IntroSection/>
             <WorkSection />
             <AboutSection/>
             <ContactSection/>
           </Container>
+          <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
         </div>
       );
 }
@@ -83,9 +87,21 @@ function Project() {
   let { projectId } = useParams();
   switch(projectId){
     case 'hpe':
-      return <ProjectHPE/>
+      return (
+        <div className="App">
+        <Navbar/>
+        <ProjectHPE/>
+        <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
+        </div>
+        )
     case 'emberlast':
-      return <ProjectEmberlast/>
+      return (
+      <div className="App">
+        <Navbar/>
+        <ProjectEmberlast/>
+        <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
+      </div>
+      )
     default:
       return <Redirect to="/" />
   }
