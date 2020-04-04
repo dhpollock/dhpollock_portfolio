@@ -16,6 +16,9 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
+    myNavbar: {
+        backgroundColor: '#449DD1'
+    },
     grow: {
         flexGrow: 1,
     },
@@ -29,8 +32,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     inputRoot: {
-        // color: 'inherit',
-        color:'red',
+        color: 'inherit',
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
@@ -67,7 +69,7 @@ export default function Navbar() {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const handleProfileMenuOpen = (event) => {
+    const handleDesktopProjectMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
@@ -101,13 +103,11 @@ export default function Navbar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/projects/emberlast">
-                    Emberlast Inc.
-            </Link>
+            <MenuItem onClick={handleMenuClose} component={Link} to={'/projects/emberlast'}>
+                Emberlast Inc.
             </MenuItem>
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/projects/hpe">HPE IoT Visualization</Link>
+            <MenuItem onClick={handleMenuClose} component={Link} to={'/projects/hpe'}>
+                HPE IoT Visualization
             </MenuItem>
         </Menu>
     );
@@ -124,9 +124,9 @@ export default function Navbar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <Link to='/'>
-                    <Button>Home</Button>
-                </Link>
+                <Button component={Link} to={'/'}>
+                    Home
+                </Button>
             </MenuItem>
             <MenuItem>
                 <Button onClick={handleClick}>
@@ -137,28 +137,28 @@ export default function Navbar() {
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List disabledPadding >
                     <ListItem className={classes.nested}>
-                        <Link to="/projects/hpe"><Button>
+                        <Button component={Link} to={'/projects/emberlast'}>
                             HPE IoT Visualization
-                            </Button></Link>
+                            </Button>
                     </ListItem>
                     <ListItem className={classes.nested}>
-                        <Link to="/projects/emberlast"><Button>
+                        <Button component={Link} to={'/projects/emberlast'}>
                             Emberlast Inc.
-                            </Button></Link>
+                            </Button>
                     </ListItem>
                 </List>
             </Collapse>
-            <MenuItem>
-                <Link to="/#about"><Button>About</Button></Link>
+            <MenuItem component={Link} to={'/#about'}>
+                <Button>About</Button>
             </MenuItem>
-            <MenuItem>
-                <Link to="/#contact"><Button>Contact</Button></Link>
+            <MenuItem component={Link} to={'/#contact'}>
+                <Button>Contact</Button>
             </MenuItem>
         </Menu>
     );
 
     return (
-        <div className={classes.grow}>
+        <div className={classes.grow} className={classes.myNavbar}>
             <AppBar position="static">
                 <Toolbar>
                     <Typography className={classes.title} variant="h6" noWrap>
@@ -167,17 +167,15 @@ export default function Navbar() {
 
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-                        <Link to='/'>
-                            <Button>Home</Button>
-                        </Link>
+                        <Button component={Link} to={'/'}> Home</Button>
                         <Button aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}>
+                            onClick={handleDesktopProjectMenuOpen}>
                             Projects
                         </Button>
-                        <Link to="/#about"><Button>About</Button></Link>
-                        <Link to="/#contact"><Button>Contact</Button></Link>
+                        <Button component={Link} to={'/#about'}>About</Button>
+                        <Button component={Link} to={'/#contact'}>Contact</Button>
 
                     </div>
 

@@ -1,10 +1,17 @@
 import React from "react"
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 import IntroSectionAuxDiv from './IntroSectionAuxDiv'
 import IntroClickableState from './IntroClickableState'
+import withStyles from "@material-ui/core/styles/withStyles";
 
+const useStyles = theme => ({
+    section:{
+        height:"95vh",
+        display:"flex",
+        justifyContent:"center",
+    }
+});
 
 class IntroSection extends React.Component {
     constructor(props) {
@@ -21,22 +28,23 @@ class IntroSection extends React.Component {
         })
     };
     render() {
-        return (<Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
-                <h1>Hello!</h1>
-                <h2>My name is <IntroClickableState value='harmon' onClick={this.handleHighlight}>Harmon</IntroClickableState>.</h2>
-                <p>I am a designer, coder, <IntroClickableState value='research' onClick={this.handleHighlight}>researcher</IntroClickableState> and entrpenuer based in Durango, CO.  I like to create new experiences in hopes of makeing a better tomorrow.</p>
-                <small>(I also like to bike and hike with my pup)</small>
+        const classes = this.props.classes
+        return (
+            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
+                <Grid item xs={12} sm={5} align={'left'}>
+                    <h1>Hello, my name is <IntroClickableState currentSelect={this.state.highlight} value='harmon' onClick={this.handleHighlight}>Harmon</IntroClickableState>.</h1>
+                    <h3>I am a <IntroClickableState currentSelect={this.state.highlight} value='research' onClick={this.handleHighlight}><strong>UX Specialist</strong></IntroClickableState> and entrepreneur based in <IntroClickableState currentSelect={this.state.highlight} value='durango' onClick={this.handleHighlight}>Durango, CO</IntroClickableState>.  I like to create new experiences in hopes of making a better tomorrow.</h3>
+                    <p>(I also like to <IntroClickableState currentSelect={this.state.highlight} value='bike' onClick={this.handleHighlight}>bike</IntroClickableState> and hike with my <IntroClickableState currentSelect={this.state.highlight} value='pup' onClick={this.handleHighlight}>pup</IntroClickableState>)</p>
+                </Grid>
+                <Grid item xs={12} sm={5}>
+                    {/* <Paper className={classes.paper}> */}
+                    {/* <Paper> */}
+                        <IntroSectionAuxDiv currentHighlight={this.state.highlight} />
+                    {/* </Paper> */}
+                </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-                {/* <Paper className={classes.paper}> */}
-                <Paper>
-                    <IntroSectionAuxDiv currentHighlight = {this.state.highlight}/>
-                </Paper>
-            </Grid>
-        </Grid>
         )
     }
 }
 
-export default IntroSection;
+export default withStyles(useStyles)(IntroSection);

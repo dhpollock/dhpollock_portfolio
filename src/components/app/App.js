@@ -11,8 +11,10 @@ import Navbar from "../common/Navbar/Navbar"
 import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button';
+
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import {
   BrowserRouter as Router,
@@ -23,6 +25,20 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+
+const theme = createMuiTheme({
+  palette: {
+    type:'dark',
+    primary: {
+      main: '#449DD1',
+    },
+    secondary: {
+      main: '#F26430',
+    },
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
+  },
+});
 
 export default function App() {
   return (
@@ -55,6 +71,9 @@ export default function App() {
 
 function Home() {
   return (
+    <ThemeProvider theme={theme}>
+                          <Paper>
+
         <div className="App">
           <Navbar/>
           <Container>
@@ -65,6 +84,8 @@ function Home() {
           </Container>
           <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
         </div>
+        </Paper>
+        </ThemeProvider>
       );
 }
 
@@ -88,19 +109,28 @@ function Project() {
   switch(projectId){
     case 'hpe':
       return (
+        <ThemeProvider theme={theme}>
+                    <Paper>
+
         <div className="App">
         <Navbar/>
         <ProjectHPE/>
         <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
         </div>
+        </Paper>
+
+        </ThemeProvider>
         )
     case 'emberlast':
       return (
+        <ThemeProvider theme={theme}>
+
       <div className="App">
         <Navbar/>
         <ProjectEmberlast/>
         <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
       </div>
+      </ThemeProvider>
       )
     default:
       return <Redirect to="/" />
