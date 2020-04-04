@@ -96,10 +96,10 @@ export default function Navbar() {
         <Menu
             anchorEl={anchorEl}
             getContentAnchorEl={null}
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
             id={menuId}
             keepMounted
-            transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            // transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
