@@ -33,7 +33,7 @@ class IntroSection extends React.Component {
             <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
                 <Grid item xs={12} sm={5} align={'left'}>
                     <h1>Hello, my name is <IntroClickableState currentSelect={this.state.highlight} value='harmon' onClick={this.handleHighlight}>Harmon</IntroClickableState>.</h1>
-                    <h3>I am a <IntroClickableState currentSelect={this.state.highlight} value='research' onClick={this.handleHighlight}><strong>UX Specialist</strong></IntroClickableState> and entrepreneur based in <IntroClickableState currentSelect={this.state.highlight} value='durango' onClick={this.handleHighlight}>Durango, CO</IntroClickableState>.  I like to create new experiences in hopes of making a better tomorrow.</h3>
+                    <h3>I am a <IntroClickableState currentSelect={this.state.highlight} value='ux' onClick={this.handleHighlight}><strong>UX & Product Generalist</strong></IntroClickableState> and entrepreneur based in <IntroClickableState currentSelect={this.state.highlight} value='durango' onClick={this.handleHighlight}>Durango, CO</IntroClickableState>.  I like to create new experiences in hopes of making a better tomorrow.</h3>
                     <p>(I also like to <IntroClickableState currentSelect={this.state.highlight} value='bike' onClick={this.handleHighlight}>bike</IntroClickableState> and hike with my <IntroClickableState currentSelect={this.state.highlight} value='pup' onClick={this.handleHighlight}>pup</IntroClickableState>)</p>
                 </Grid>
                 <Grid item xs={12} sm={5}>

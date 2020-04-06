@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom';
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -17,24 +18,23 @@ const useStyles = makeStyles({
 
 export default function ImgMediaCard(props) {
   const classes = useStyles();
-
+    console.log(props);
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt={props.imageAlt}
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={props.imageURL}
+          title={props.imageTitle}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.titleText}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          <Typography variant="body2" color="textSecondary" component="p" align="left">
+            {props.subText}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -42,11 +42,9 @@ export default function ImgMediaCard(props) {
         {/* <Button size="small" color="primary">
           Share
         </Button> */}
-        <Link to={"/projects/"+props.linkURL}>
-            <Button size="small" color="primary">
-            Read More
-            </Button>
-        </Link>
+        <Button component={Link} to={"/projects/"+props.linkURL} size="small" color="primary">
+        Read More
+        </Button>
       </CardActions>
     </Card>
   );

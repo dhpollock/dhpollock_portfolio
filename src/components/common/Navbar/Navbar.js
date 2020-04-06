@@ -137,7 +137,7 @@ export default function Navbar() {
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List disabledPadding >
                     <ListItem className={classes.nested}>
-                        <Button component={Link} to={'/projects/emberlast'}>
+                        <Button component={Link} to={'/projects/hpe'}>
                             HPE IoT Visualization
                             </Button>
                     </ListItem>
