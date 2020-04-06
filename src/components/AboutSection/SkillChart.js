@@ -8,8 +8,9 @@ const Arc = ({ data, index, createArc, colors, format }) => (
       transform={`translate(${createArc.centroid(data)})`}
       textAnchor="middle"
       alignmentBaseline="middle"
-      fill="black"
-      fontSize="14"
+      fill="white"
+      fontSize="18"
+      fontWeight="500"
     >
     {/* <textPath href="#arc-{index}"> */}
     { data.data.prettyPrint }

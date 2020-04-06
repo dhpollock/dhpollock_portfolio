@@ -7,9 +7,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 const useStyles = theme => ({
     section:{
-        height:"95vh",
         display:"flex",
         justifyContent:"center",
+        minHeight: '95vh',
+        maxHeight: 'fit-content'
     }
 });
 

@@ -7,9 +7,10 @@ import HPEThumb from '../../images/hpe_demolvl05.png';
 import EmberlastThumb from '../../images/emberlast_sticky.png'
 const useStyles = theme => ({
     section:{
-        height:"95vh",
         display:"flex",
         justifyContent:"center",
+        minHeight: '95vh',
+        maxHeight: 'fit-content'
     }
 });
 
