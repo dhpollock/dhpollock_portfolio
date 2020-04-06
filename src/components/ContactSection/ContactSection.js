@@ -36,7 +36,7 @@ class ContactSection extends React.Component {
     render() {
         const classes = this.props.classes
         return (
-            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
+            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center" id="contact">
                 <Grid item>
 
                     <Grid item xs={12} sm={12}>

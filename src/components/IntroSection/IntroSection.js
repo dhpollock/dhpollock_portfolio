@@ -10,7 +10,8 @@ const useStyles = theme => ({
         display:"flex",
         justifyContent:"center",
         minHeight: '95vh',
-        maxHeight: 'fit-content'
+        maxHeight: 'fit-content',
+        paddingTop:'50px'
     }
 });
 
@@ -31,7 +32,7 @@ class IntroSection extends React.Component {
     render() {
         const classes = this.props.classes
         return (
-            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
+            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center" id="home">
                 <Grid item xs={12} sm={5} align={'left'}>
                     <h1>Hello, my name is <IntroClickableState currentSelect={this.state.highlight} value='harmon' onClick={this.handleHighlight}>Harmon</IntroClickableState>.</h1>
                     <h3>I am a <IntroClickableState currentSelect={this.state.highlight} value='ux' onClick={this.handleHighlight}><strong>UX & Product Generalist</strong></IntroClickableState> and entrepreneur based in <IntroClickableState currentSelect={this.state.highlight} value='durango' onClick={this.handleHighlight}>Durango, CO</IntroClickableState>.  I like to create new experiences in hopes of making a better tomorrow.</h3>

@@ -7,7 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -17,7 +18,8 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
     myNavbar: {
-        backgroundColor: '#449DD1'
+        backgroundColor: '#449DD1',
+        zIndex:'10'
     },
     grow: {
         flexGrow: 1,
@@ -59,7 +61,12 @@ const useStyles = makeStyles((theme) => ({
     nested: {
         paddingLeft: theme.spacing(4),
     },
+    noLink:{
+        textDecoration:"inherit",
+        color:"inherit"
+    }
 }));
+
 
 export default function Navbar() {
     const classes = useStyles();
@@ -124,7 +131,7 @@ export default function Navbar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <Button component={Link} to={'/'}>
+                <Button component={Link} to={'/#home'}>
                     Home
                 </Button>
             </MenuItem>
@@ -159,15 +166,15 @@ export default function Navbar() {
 
     return (
         <div className={classes.grow} className={classes.myNavbar}>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar>
-                    <Typography className={classes.title} variant="h6" noWrap>
+                    <Typography className={classes.title} variant="h6" noWrap component={Link} to={"/"} className={classes.noLink}>
                         D. Harmon Pollock
                 </Typography>
 
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-                        <Button component={Link} to={'/'}> Home</Button>
+                        <Button component={Link} to={'/#home'}> Home</Button>
                         <Button aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"

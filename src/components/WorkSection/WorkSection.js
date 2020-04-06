@@ -18,7 +18,7 @@ class WorkSection extends React.Component {
     render() {
         const classes = this.props.classes
         return (
-            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
+            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center" id="projects">
                 <Grid item>
                     <Grid container>
                         <Grid item xs={12}>

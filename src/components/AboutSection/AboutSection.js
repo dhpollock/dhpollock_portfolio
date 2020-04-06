@@ -49,7 +49,7 @@ class AboutSection extends React.Component {
         const data = [{ data: 0, value: 4, prettyPrint: "Design" }, { data: 1, value: 2, prettyPrint: "Research" }, { data: 2, value: 4, prettyPrint: "Development" }];
         const classes = this.props.classes
         return (
-            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center">
+            <Grid container spacing={3} justify='center' className={classes.section} alignItems="center" id="about">
                 <Grid item>
                     <Grid container spacing={3} justify='center'>
                         <Grid item xs={12}>
