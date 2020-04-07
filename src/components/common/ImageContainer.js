@@ -14,8 +14,7 @@ const useStyles = theme => ({
   image: {
     maxHeight: 400,
     maxWidth:'50%',
-    marginLeft: '10px',
-    marginRight: '10px',
+    margin: '10px',
   },
   caption: {
     textAlign: 'center',
