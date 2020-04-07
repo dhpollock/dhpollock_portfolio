@@ -28,7 +28,7 @@ import {
 
 const theme = createMuiTheme({
   palette: {
-    type:'dark',
+    type: 'dark',
     primary: {
       main: '#449DD1',
     },
@@ -56,14 +56,14 @@ export default function App() {
           </li>
         </ul> */}
 
-        <Switch>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
       {/* </div> */}
     </Router>
   );
@@ -72,65 +72,67 @@ export default function App() {
 function Home() {
   return (
     <ThemeProvider theme={theme}>
-                          <Paper>
+      <Paper>
 
         <div className="App">
-          <Navbar/>
+          <Navbar />
           <Container>
-            <IntroSection/>
+            <IntroSection />
             <WorkSection />
-            <AboutSection/>
-            <ContactSection/>
+            <AboutSection />
+            <ContactSection />
           </Container>
-          <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
+          <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock" />
         </div>
-        </Paper>
-        </ThemeProvider>
-      );
+      </Paper>
+    </ThemeProvider>
+  );
 }
 
 function Projects() {
   let match = useRouteMatch();
 
   return (
-      <Switch>
-        <Route path={`${match.path}/:projectId`}>
-          <Project />
-        </Route>
-        <Route path={`${match.path}`}>
-          <Redirect to="/" />
-        </Route>
-      </Switch>
+    <Switch>
+      <Route path={`${match.path}/:projectId`}>
+        <Project />
+      </Route>
+      <Route path={`${match.path}`}>
+        <Redirect to="/" />
+      </Route>
+    </Switch>
   );
 }
 
 function Project() {
   let { projectId } = useParams();
-  switch(projectId){
+  switch (projectId) {
     case 'hpe':
       return (
         <ThemeProvider theme={theme}>
-                    <Paper>
+          <Paper>
 
-        <div className="App">
-        <Navbar/>
-        <ProjectHPE/>
-        <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
-        </div>
-        </Paper>
+            <div className="App">
+              <Navbar />
+              <ProjectHPE />
+              <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock" />
+            </div>
+          </Paper>
 
         </ThemeProvider>
-        )
+      )
     case 'emberlast':
       return (
         <ThemeProvider theme={theme}>
+          <Paper>
 
-      <div className="App">
-        <Navbar/>
-        <ProjectEmberlast/>
-        <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock"/>
-      </div>
-      </ThemeProvider>
+            <div className="App">
+              <Navbar />
+              <ProjectEmberlast />
+              <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock" />
+            </div>
+          </Paper>
+        </ThemeProvider>
       )
     default:
       return <Redirect to="/" />
