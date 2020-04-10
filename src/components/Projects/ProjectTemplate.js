@@ -4,7 +4,8 @@ import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
 import Navbar from "../common/Navbar/Navbar"
 import withStyles from "@material-ui/core/styles/withStyles";
-
+import SimpleReactLightbox from "simple-react-lightbox"; // Import Simple React Lightbox
+import { SRLWrapper } from "simple-react-lightbox"; // Import SRLWrapper
 const useStyles = theme => ({
     section: {
         display: "flex",
@@ -29,23 +30,26 @@ const useStyles = theme => ({
 function ProjectTemplate(props) {
     const classes = props.classes
     return (
-        <Container>
-            <Grid container className={classes.section}>
-                <Grid item xs={12} sm={8}>
-                    <div className={classes.titleSection} style={{backgroundImage:`url(${props.bannerImage})`}}>
-                        <div className={classes.titleOverlaySection}>
-                            <h1>{props.title}</h1>
-                            <h3>By: {props.author}</h3>
-                            <small>Posted: {props.date}</small>
+        <SimpleReactLightbox>    
+            <Container>
+                <Grid container className={classes.section}>
+                    <Grid item xs={12} sm={8}>
+                        <div className={classes.titleSection} style={{backgroundImage:`url(${props.bannerImage})`}}>
+                            <div className={classes.titleOverlaySection}>
+                                <h1>{props.title}</h1>
+                                <h3>By: {props.author}</h3>
+                                <small>Posted: {props.date}</small>
+                            </div>
                         </div>
-                    </div>
-                    <div className={classes.bodySection}>
-                        {props.children}
-                    </div>
+                        <div className={classes.bodySection}>
+                        <SRLWrapper>
+                            {props.children}
+                            </SRLWrapper>
+                        </div>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </Container>
-
+            </Container>
+        </SimpleReactLightbox>
     )
 }
 

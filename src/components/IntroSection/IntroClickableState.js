@@ -20,7 +20,7 @@ export class IntroClickableState extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        console.log(props);
+        // console.log(props);
     }
 
     handleClick() {

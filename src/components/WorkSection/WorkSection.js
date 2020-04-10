@@ -37,11 +37,11 @@ class WorkSection extends React.Component {
                         </Grid>
                         <Grid item xs={12} sm={6} align="center">
                             <ImgMediaCard
-                                linkURL = "hpe"
+                                linkURL = "iot"
                                 imageURL = {HPEThumb}
-                                imageTitle = "HPE Demo Level 05"
-                                imageAlt = "hpe thumbnail"
-                                titleText = "HPE IoT Visualization"
+                                imageTitle = "IoT Demo Level 05"
+                                imageAlt = "iot thumbnail"
+                                titleText = "IoT Visualization"
                                 subText = "A case study into research based design, and creating a novel data visualization and interaction model for managing complex Internet of Things (IoT) systems."
                             >
                             </ImgMediaCard>

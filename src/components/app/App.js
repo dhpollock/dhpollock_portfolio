@@ -6,14 +6,13 @@ import WorkSection from "../WorkSection/WorkSection";
 import AboutSection from "../AboutSection/AboutSection";
 import ContactSection from "../ContactSection/ContactSection";
 import ProjectEmberlast from "../Projects/ProjectEmberlast";
-import ProjectHPE from "../Projects/ProjectHPE";
+import ProjectIoT from "../Projects/ProjectIoT";
 import Navbar from "../common/Navbar/Navbar"
 import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button';
-
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import {
@@ -43,19 +42,6 @@ const theme = createMuiTheme({
 export default function App() {
   return (
     <Router>
-      {/* <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul> */}
-
       <Switch>
         <Route path="/projects">
           <Projects />
@@ -107,14 +93,13 @@ function Projects() {
 function Project() {
   let { projectId } = useParams();
   switch (projectId) {
-    case 'hpe':
+    case 'iot':
       return (
         <ThemeProvider theme={theme}>
           <Paper>
-
             <div className="App">
               <Navbar />
-              <ProjectHPE />
+              <ProjectIoT />
               <Footer copyrightYear="2020" copyrightFirm="D.H. Pollock" />
             </div>
           </Paper>
@@ -125,7 +110,6 @@ function Project() {
       return (
         <ThemeProvider theme={theme}>
           <Paper>
-
             <div className="App">
               <Navbar />
               <ProjectEmberlast />

@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import IntroSectionAuxDiv from './IntroSectionAuxDiv'
 import IntroClickableState from './IntroClickableState'
 import withStyles from "@material-ui/core/styles/withStyles";
-
+import Arrow from './Arrow'
 const useStyles = theme => ({
     section:{
         display:"flex",
@@ -44,6 +44,7 @@ class IntroSection extends React.Component {
                         <IntroSectionAuxDiv currentHighlight={this.state.highlight} />
                     {/* </Paper> */}
                 </Grid>
+                <Arrow/>
             </Grid>
         )
     }

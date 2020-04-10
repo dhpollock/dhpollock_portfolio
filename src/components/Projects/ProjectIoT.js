@@ -2,14 +2,14 @@ import React from 'react';
 import ProjectTemplate from "./ProjectTemplate";
 import ImageContainer from "../common/ImageContainer"
 import HPEThumb from '../../images/hpe_demolvl05.png';
-import ResearchImage from '../../images/hpe/research.png'
-import Screenshot01 from '../../images/hpe/hpe_demolvl01.png'
-import Screenshot02 from '../../images/hpe/hpe_demolvl02.png'
-import Screenshot03 from '../../images/hpe/hpe_demolvl03.png'
-import Screenshot04 from '../../images/hpe/hpe_demolvl04.png'
-import Screenshot05 from '../../images/hpe/hpe_demolvl05.png'
-import Screenshot06 from '../../images/hpe/hpe_demolvl06.png'
-import DeadspaceUI from '../../images/hpe/deadspaceUI.png'
+import ResearchImage from '../../images/iot/research.png'
+import Screenshot01 from '../../images/iot/hpe_demolvl01.png'
+import Screenshot02 from '../../images/iot/hpe_demolvl02.png'
+import Screenshot03 from '../../images/iot/hpe_demolvl03.png'
+import Screenshot04 from '../../images/iot/hpe_demolvl04.png'
+import Screenshot05 from '../../images/iot/hpe_demolvl05.png'
+import Screenshot06 from '../../images/iot/hpe_demolvl06.png'
+import DeadspaceUI from '../../images/iot/deadspaceUI.png'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -38,11 +38,11 @@ const useStyles = theme => ({
     },
 });
 
-function ProjectHPE(props) {
+function ProjectIoT(props) {
     const classes = props.classes
     return (
         <ProjectTemplate
-            title="HPE IoT Visualization"
+            title="IoT Visualization"
             author="Harmon Pollock"
             date="March 2020"
             bannerImage={HPEThumb}
@@ -182,4 +182,4 @@ function ProjectHPE(props) {
     )
 }
 
-export default withStyles(useStyles)(ProjectHPE)
+export default withStyles(useStyles)(ProjectIoT)

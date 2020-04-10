@@ -32,7 +32,7 @@ const SkillChart = props => {
   const colors = d3.scaleOrdinal(d3.schemeCategory10);
 //   const format = d3.format(".2f");
   const data = createPie(props.data);
-    console.log(data);
+    // console.log(data);
   return (
     <svg width={props.width} height={props.height} overflow="visible">
       <g transform={`translate(${props.outerRadius} ${props.outerRadius})`}>

@@ -113,8 +113,8 @@ export default function Navbar() {
             <MenuItem onClick={handleMenuClose} component={Link} to={'/projects/emberlast'}>
                 Emberlast Inc.
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={Link} to={'/projects/hpe'}>
-                HPE IoT Visualization
+            <MenuItem onClick={handleMenuClose} component={Link} to={'/projects/iot'}>
+                IoT Visualization
             </MenuItem>
         </Menu>
     );
@@ -144,8 +144,8 @@ export default function Navbar() {
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List disabledPadding >
                     <ListItem className={classes.nested}>
-                        <Button component={Link} to={'/projects/hpe'}>
-                            HPE IoT Visualization
+                        <Button component={Link} to={'/projects/iot'}>
+                            IoT Visualization
                             </Button>
                     </ListItem>
                     <ListItem className={classes.nested}>
