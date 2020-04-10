@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import GridList from '@material-ui/core/GridList';
 import ImgMediaCard from './ImgMediaCard';
 import withStyles from "@material-ui/core/styles/withStyles";
 import HPEThumb from '../../images/hpe_demolvl05.png';

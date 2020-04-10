@@ -106,7 +106,6 @@ export default function Navbar() {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
             id={menuId}
             keepMounted
-            // transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
@@ -165,10 +164,10 @@ export default function Navbar() {
     );
 
     return (
-        <div className={classes.grow} className={classes.myNavbar}>
+        <div className={`${classes.grow} ${classes.myNavbar}`}>
             <AppBar position="fixed">
                 <Toolbar>
-                    <Typography className={classes.title} variant="h6" noWrap component={Link} to={"/"} className={classes.noLink}>
+                    <Typography className={`${classes.title} ${classes.noLink}`} variant="h6" noWrap component={Link} to={"/"}>
                         D. Harmon Pollock
                 </Typography>
 

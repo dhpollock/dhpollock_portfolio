@@ -10,16 +10,13 @@ import ProjectIoT from "../Projects/ProjectIoT";
 import Navbar from "../common/Navbar/Navbar"
 import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
-import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
   useRouteMatch,
   useParams

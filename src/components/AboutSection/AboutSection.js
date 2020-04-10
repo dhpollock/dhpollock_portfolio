@@ -5,7 +5,6 @@ import Divider from '@material-ui/core/Divider';
 import Chip from '@material-ui/core/Chip';
 import Hidden from '@material-ui/core/Hidden';
 import withStyles from "@material-ui/core/styles/withStyles";
-import {Link} from 'react-router-dom'
 import PDFIcon from "../../images/icons/pdf_icon.png"
 import WebResume from "../../media/pollock_harmon_webresume.pdf"
 const useStyles = theme => ({
@@ -172,8 +171,8 @@ class AboutSection extends React.Component {
 
                         <Grid item xs={12} sm={6}>
                             <h3>Resume PDF</h3>
-                            <a href={WebResume} target="_blank">
-                                <img className={classes.pdfIcon} src={PDFIcon}/>
+                            <a href={WebResume} target="_blank" rel="noopener noreferrer">
+                                <img className={classes.pdfIcon} src={PDFIcon} alt=""/>
                             </a>
                         </Grid>
 

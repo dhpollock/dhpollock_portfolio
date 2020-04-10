@@ -2,7 +2,6 @@ import React from "react"
 import HarmonProfilePic from '../../images/harmon_pollock.jpg'
 import CookieProfilePic from '../../images/cookie.jpg'
 import BikeProfilePic from '../../images/dhpollock_bike.png'
-import { fade } from '@material-ui/core/styles/colorManipulator';
 import withStyles from "@material-ui/core/styles/withStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import TreeView from '@material-ui/lab/TreeView';
@@ -20,7 +19,6 @@ import LanguageIcon from '@material-ui/icons/Language';
 import PermDataSettingIcon from '@material-ui/icons/PermDataSetting';
 import PersonalVideoIcon from '@material-ui/icons/PersonalVideo';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
-import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import PropTypes from 'prop-types';
@@ -131,7 +129,6 @@ const useTreeItemStyles = makeStyles((theme) => ({
               {labelText}
             </Typography>
             <Typography variant="caption" color="inherit">
-              {/* {labelInfo} */}
             </Typography>
           </div>
         }
@@ -258,14 +255,14 @@ function IntroSectionAuxDiv(props){
         case 'pup':
             return (
                 <div className={classes.auxContainer}>
-                    <img src={CookieProfilePic} className={classes.profilePic}/>
+                    <img src={CookieProfilePic} className={classes.profilePic} alt=""/>
                     <div className={classes.profilePicOverlay}>Running!</div>
                 </div>
             )
         case 'bike':
             return (
                 <div className={classes.auxContainer}>
-                    <img src={BikeProfilePic} className={classes.profilePic}/>
+                    <img src={BikeProfilePic} className={classes.profilePic} alt=""/>
                     <div className={classes.profilePicOverlay}>Biking!</div>
                 </div>
             )
@@ -274,17 +271,15 @@ function IntroSectionAuxDiv(props){
                 <div className={classes.auxContainer}>
                     <div class="mapouter" className={classes.mapStylesRouter}>
                         <div class="gmap_canvas" className={classes.mapStyleCanvas}>
-                            <iframe width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Durango&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://www.embedgooglemap.net"></a>
+                            <iframe title="map" width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Durango&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
-                        {/* <style>.mapouter{position:relative;text-align:right;height:400px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:400px;}</style> */}
                     </div>
                 </div>
             )
         default:
             return (
                 <div className={classes.auxContainer}>
-                    <img src={HarmonProfilePic} className={classes.profilePic}/>
+                    <img src={HarmonProfilePic} className={classes.profilePic} alt=""/>
                     <div className={classes.profilePicOverlay}>My first name is 'Drew', but I go by 'Harmon'!</div>
                 </div>
             )

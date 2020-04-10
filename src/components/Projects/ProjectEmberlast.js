@@ -1,6 +1,5 @@
 import React from 'react';
 import ProjectTemplate from "./ProjectTemplate";
-import Grid from '@material-ui/core/Grid';
 import withStyles from "@material-ui/core/styles/withStyles";
 import EmberlastThumb from '../../images/emberlast/sticky.png'
 import EmberlastPersona from '../../images/emberlast/persona.png'
@@ -13,10 +12,8 @@ import EmberlastDesktop03 from '../../images/emberlast/desktop03.jpg'
 import EmberlastFinal01 from '../../images/emberlast/final01.jpg'
 import EmberlastFinal02 from '../../images/emberlast/final02.jpg'
 import EmberlastFinal03 from '../../images/emberlast/final03.jpg'
-import EmberlastBanner from '../../images/emberlast/banner.jpg'
-import EmberlastBanner2 from '../../images/emberlast/banner2.jpg'
+import EmberlastBanner from '../../images/emberlast/banner2.jpg'
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
@@ -50,11 +47,8 @@ function ProjectEmberlast(props) {
             title="EmberLast Inc."
             author="Harmon Pollock"
             date="March 2020"
-            bannerImage={EmberlastBanner2}
+            bannerImage={EmberlastBanner}
         >
-
-            {/* <Grid container justify="left" alignItems="left" alignContent="left" className={classes.section}>
-                <Grid item xs={12}> */}
 
             <h2>Introduction:</h2>
 
@@ -78,11 +72,7 @@ function ProjectEmberlast(props) {
                     <ListItemText primary="C) What do they like and dislike about current online memorial products?" />
                 </ListItem>
             </List>
-            {/* <p>A) How are people currently dealing with death, grief, and loss of loved ones?</p>
-            <p>B) Who is currently using online memorials?</p>
-            <p>C) What do they like and dislike about current online memorial products?</p> */}
 
-            {/* <visual note> */}
             <div className={classes.noteContainer}>
                 <Card variant="outlined" className={classes.cardDark}>
                     <CardContent>
@@ -118,8 +108,6 @@ function ProjectEmberlast(props) {
                     </CardContent>
                 </Card>
             </div>
-
-            {/* <end visual note> */}
 
             <h3>Insights from Market Research:</h3>
                 <ImageContainer
@@ -166,9 +154,7 @@ function ProjectEmberlast(props) {
                     <ListItemText primary="C) How can we differentiate EmberLast from the competition?" />
                 </ListItem>
             </List>
-            {/* <p>A) What is the MVP feature set for an successful online memorial?</p>
-            <p>B) What are specific needs our the key customers?  (Access, control, communication, etc)</p>
-            <p>C) How can we differentiate EmberLast from the competition?</p> */}
+
             <div className={classes.noteContainer}>
                 <Card variant="outlined" className={classes.cardDark}>
                     <CardContent>
@@ -198,9 +184,8 @@ function ProjectEmberlast(props) {
                 imagethree={EmberlastDesktop03}
                 caption="Iterative mockups of desktop features"
             />
-            {/* <IMAGES / EXAMPLES / PHOTOWALKTHROUGHT OF LESSONS> */}
+
             <h2>Results</h2>
-            {/* < FINAL PRODUCT ish> */}
 
             <h3>MVP Features and Screen Mockups for Development</h3>
             <p>While user testing is never complete, we gathered enough information to set out MVP featurelist.  Using this list and our previous mockups we were able to work with a visual artist to generate final MVP screenshots to give as a reference for our development team.</p>

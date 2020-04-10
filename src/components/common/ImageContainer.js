@@ -1,7 +1,5 @@
 import React from 'react';
 import withStyles from "@material-ui/core/styles/withStyles";
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 
 
@@ -34,16 +32,16 @@ class ImageContainer extends React.Component {
   }
 
   renderOptionalImagesTwo(classes) {
-    if (this.props.imagetwo != undefined) {
+    if (this.props.imagetwo !== undefined) {
       return (
-        <img src={this.props.imagetwo} className={classes.image} />
+        <img src={this.props.imagetwo} className={classes.image} alt=""/>
       )
     }
   }
   renderOptionalImagesThree(classes) {
-    if (this.props.imagethree != undefined) {
+    if (this.props.imagethree !== undefined) {
       return (
-        <img src={this.props.imagethree} className={classes.image} />
+        <img src={this.props.imagethree} className={classes.image} alt=""/>
       )
     }
   }
@@ -53,7 +51,7 @@ class ImageContainer extends React.Component {
       <div>
         <Grid container>
           <Grid item xs={12} className={classes.container}>
-            <img src={this.props.image} className={classes.image} />
+            <img src={this.props.image} className={classes.image} alt=""/>
             {this.renderOptionalImagesTwo(classes)}
             {this.renderOptionalImagesThree(classes)}
           </Grid>

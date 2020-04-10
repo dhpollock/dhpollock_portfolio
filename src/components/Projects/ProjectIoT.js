@@ -11,9 +11,7 @@ import Screenshot05 from '../../images/iot/hpe_demolvl05.png'
 import Screenshot06 from '../../images/iot/hpe_demolvl06.png'
 import DeadspaceUI from '../../images/iot/deadspaceUI.png'
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -99,7 +97,7 @@ function ProjectIoT(props) {
             <p>The 1968 short film “Powers of Ten” by Charles Eames demonstrated the physical scale of objects, starting with humans in a park and zooming-out to the size of the known universe, and zooming-in to the scale of a proton, while visiting incremental steps along the way.  Eames’ film proved to be an effective tool for students to gain understanding and intuition concerning scale and relative sizes [5]. </p>
 
             <div className={classes.noteContainer}>
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Powers of Ten"></iframe>
             </div>
 
             <p>My aim was to apply the same method to visualizing complex networking and IoT systems, allowing users to gain an intuition for a system that might typically be considered more abstract.</p>
@@ -137,8 +135,7 @@ function ProjectIoT(props) {
             <h2>Results:</h2>
             <p>The goal of this project was to generate new IP for HPE future projects.  Once the full stack concept was proven with the second iteration of a clickable prototype, the project documentation was finalized and set up for a patent application.</p>
 
-            <p>The patent application was approved and I was awarded authorship of patent <a className={classes.patentLink} href={PatentPDF} target="_blank">#10140749</a></p>
-            {/* Link to Patent #abc PDF: */}
+            <p>The patent application was approved and I was awarded authorship of patent <a className={classes.patentLink} href={PatentPDF} target="_blank" rel="noopener noreferrer">#10140749</a></p>
 
             <h2>Resources:</h2>
             <p>
