@@ -16,7 +16,8 @@ const useStyles = theme => ({
     titleSection: {
         textAlign: 'center',
         paddingTop:'25px',
-        paddingBottom:'25px'
+        paddingBottom:'25px',
+        marginBottom:'75px'
     },
     titleOverlaySection:{
         backgroundColor:'#000000',
@@ -34,7 +35,7 @@ function ProjectTemplate(props) {
             <Container>
                 <Grid container className={classes.section}>
                     <Grid item xs={12} sm={8}>
-                        <div className={classes.titleSection} style={{backgroundImage:`url(${props.bannerImage})`}}>
+                        <div className={classes.titleSection} style={{backgroundImage:`url(${props.bannerImage})`, backgroundSize:'cover', backgroundPosition:'center'}}>
                             <div className={classes.titleOverlaySection}>
                                 <h1>{props.title}</h1>
                                 <h3>By: {props.author}</h3>

@@ -56,7 +56,7 @@ class AboutSection extends React.Component {
                             <h1>About</h1>
                         </Grid>
                         <Grid item sm={12} md={4} align='left'>
-                            <h3>Development</h3>
+                            <h3>UX Development</h3>
                             <Divider variant="fullWidth" className={classes.dividerPadding}></Divider>
                             <Grid container alignItems="flex-start">
                                 <Grid item xs={3}>
@@ -110,7 +110,7 @@ class AboutSection extends React.Component {
                             </Grid>
                         </Hidden>
                         <Grid item sm={12} md={4} align='left'>
-                            <h3>Design</h3>
+                            <h3>UX Design</h3>
                             <Divider variant="fullWidth" className={classes.dividerPadding}></Divider>
                             <Grid container>
                                 <Grid item xs={4}>
@@ -144,7 +144,7 @@ class AboutSection extends React.Component {
                         </Grid>
                         <Hidden only={['xs', 'sm']}>
                             <Grid item sm={12} md={4} align='center'>
-                                <h3>Research</h3>
+                                <h3>UX Research</h3>
                                 <Divider variant="fullWidth" className={classes.dividerPadding}></Divider>
                                 <div className={classes.chipListCenter}>
                                     <Chip label="Survey Writing" size="small" />
@@ -157,7 +157,7 @@ class AboutSection extends React.Component {
                         </Hidden>
                         <Hidden mdUp>
                             <Grid item sm={12} md={4} align='left'>
-                                <h3>Research</h3>
+                                <h3>UX Research</h3>
                                 <Divider variant="fullWidth" className={classes.dividerPadding}></Divider>
                                 <div className={classes.chipList}>
                                     <Chip label="Survey Writing" size="small" />

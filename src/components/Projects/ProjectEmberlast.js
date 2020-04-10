@@ -2,17 +2,19 @@ import React from 'react';
 import ProjectTemplate from "./ProjectTemplate";
 import Grid from '@material-ui/core/Grid';
 import withStyles from "@material-ui/core/styles/withStyles";
-import EmberlastThumb from '../../images/emberlast_sticky.png'
+import EmberlastThumb from '../../images/emberlast/sticky.png'
 import EmberlastPersona from '../../images/emberlast/persona.png'
-import EmberlastUsers from '../../images/emberlast/users.jpg'
-import EmberlastMobile01 from '../../images/emberlast/mobile01.png'
-import EmberlastMobile02 from '../../images/emberlast/mobile02.png'
-import EmberlastDesktop01 from '../../images/emberlast/desktop01.png'
-import EmberlastDesktop02 from '../../images/emberlast/desktop02.png'
-import EmberlastDesktop03 from '../../images/emberlast/desktop03.png'
-import EmberlastFinal01 from '../../images/emberlast/final01.png'
-import EmberlastFinal02 from '../../images/emberlast/final02.png'
-import EmberlastFinal03 from '../../images/emberlast/final03.png'
+import EmberlastUsers from '../../images/emberlast/users.png'
+import EmberlastMobile01 from '../../images/emberlast/mobile01.jpg'
+import EmberlastMobile02 from '../../images/emberlast/mobile02.jpg'
+import EmberlastDesktop01 from '../../images/emberlast/desktop01.jpg'
+import EmberlastDesktop02 from '../../images/emberlast/desktop02.jpg'
+import EmberlastDesktop03 from '../../images/emberlast/desktop03.jpg'
+import EmberlastFinal01 from '../../images/emberlast/final01.jpg'
+import EmberlastFinal02 from '../../images/emberlast/final02.jpg'
+import EmberlastFinal03 from '../../images/emberlast/final03.jpg'
+import EmberlastBanner from '../../images/emberlast/banner.jpg'
+import EmberlastBanner2 from '../../images/emberlast/banner2.jpg'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -45,10 +47,10 @@ function ProjectEmberlast(props) {
     const classes = props.classes
     return (
         <ProjectTemplate
-            title="Emberlast Inc."
+            title="EmberLast Inc."
             author="Harmon Pollock"
             date="March 2020"
-            bannerImage={EmberlastThumb}
+            bannerImage={EmberlastBanner2}
         >
 
             {/* <Grid container justify="left" alignItems="left" alignContent="left" className={classes.section}>
@@ -56,12 +58,12 @@ function ProjectEmberlast(props) {
 
             <h2>Introduction:</h2>
 
-            <p>EmberLast was a company I co-founded with a mission to provide a modern (with respects to both technology and cultural) approach to death. Using online memorials as a platform for connecting communities and sharing meaningful content, EmberLast focused on delivering a user-first experience. The aim of this article is to review a bit of my design processes, what worked well and what lessons were learned.</p>
+            <p>EmberLast was a company I co-founded with a mission to provide online memorials as a platform for connecting communities and sharing meaningful memories.  EmberLast focused on delivering a user-first experience. This review of the design processes highlights what worked well and what lessons were learned.</p>
 
 
             <h2>Market Research (Identifying Key Customers):</h2>
 
-            <p>One of the key tenants to establishing a new product it so identify the some key customer segments in most dire need of your product. While everyone at some point experiences a loss, I really wanted to know who was currently using online memorials and who might be more eager to be an early adopter. Thus began a three month market research campaign which included ~ 100 clinical interviews (typically an hour long phone call) and number of online surveys with ~1200 participants.</p>
+            <p>One of the key tenets to establishing a new product is to identify the key customer segments for your product. Everyone experiences the loss of a loved one.  Research was needed to identify those utilizing online memorials and might be willing to be early adopters of a new platform.  Thus began a three-month market research campaign.  It included ~ 100 clinical interviews (typically an hour long phone discussion) and in-depth online surveys with ~1200 participants.</p>
             <br />
 
             <p>The three main campaign questions/learning goals:</p>
@@ -88,8 +90,8 @@ function ProjectEmberlast(props) {
                             A quick note on clinical interviewing about death and grief:
                     </Typography>
                         <Typography variant="body2" component="p">
-                            This is a difficult topic for many people to talk about, and especially so with random strangers (myself) over the internet or phone. Obviously as the interview it was critical to bring hefty amount of <strong className={classes.emphasis}>RESPECT</strong> and <strong className={classes.emphasis}>OPEN MINDEDNESS</strong> to the table, and be prepared for tears, as it is the nature of the subject matter. On top of these key tenants, there were a few strategies that helped the process.
-                        <br /><br />
+                            This is a difficult topic for many people to talk about, and especially with random strangers (myself) over the internet or phone.  As the interviewer, it was critical to bring <strong className={classes.emphasis}>RESPECT</strong> and <strong className={classes.emphasis}>OPEN MINDEDNESS</strong> to the table, and to be prepared for tears and heavy emotions because of the subject matter. There were a few strategies that helped the process. 
+                            <br /><br />
                         </Typography>
 
                         <List>
@@ -103,13 +105,13 @@ function ProjectEmberlast(props) {
                                 <ListItemIcon>
                                     <RadioButtonUncheckedIcon fontSize="small" />
                                 </ListItemIcon>
-                                <ListItemText primary="Don’t be afraid of silence: Some of the best insights came after allowing the interviewee some time and space to reflect. Although this comes at the cost of some uncomfortable silence it can be a valuable approach." />
+                                <ListItemText primary="Don’t be afraid of silence: Some of the best insights came after allowing the interviewee some time and space to reflect." />
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
                                     <RadioButtonUncheckedIcon fontSize="small" />
                                 </ListItemIcon>
-                                <ListItemText primary="Keep talking after the interview is ‘over’: There were a few occasions when after the formal interview had concluded, and I was answering any of the interviewee’s curiosities that the conversation would re-ignite or interviewee would have more to say after given some additional context to the work. These valuable moments lead to a number of insightful nuggets." />
+                                <ListItemText primary="Keep talking after the interview is ‘over’: There were a few occasions when after the formal interview had concluded, and I was answering some of the interviewee’s questions the conversation would re-ignite or the interviewee would have more to say.  These valuable moments led to a deeper understanding of the grieving process." />
                             </ListItem>
                         </List>
 
@@ -124,7 +126,7 @@ function ProjectEmberlast(props) {
                     image={EmberlastThumb}
                     caption="Interview moments were decomposed onto virtial sticky notes in Miro, and then organized to reveal themes and insights"
                 />
-            <p><strong className={classes.emphasis}>#1)</strong> A cultural trend towards celebration: A large number of those we talked to said preferred to avoid “traditional” ceremonies around death (e.g. funeral homes burials, mourning services) in favor of celebrations of life ceremonies and activities.</p>
+            <p><strong className={classes.emphasis}>#1)</strong> Keep talking after the interview is ‘over’: There were a few occasions when after the formal interview had concluded, and I was answering some of the interviewee’s questions the conversation would re-ignite or the interviewee would have more to say.  These valuable moments led to a deeper understanding of the grieving process.</p>
 
             <p><strong className={classes.emphasis}>#2)</strong> Traditional demographics provided no insight: There seemed to be no connection to online memorial usage and gender/age/religion/geographic location.</p>
 
@@ -135,9 +137,9 @@ function ProjectEmberlast(props) {
                 caption="A visual diagram of the variety potential users relationships and vectors to reach the family (EoL Influencers)"
             />
 
-            <p><strong className={classes.emphasis}>#4)</strong> A cultural trend of distributed communities: Online memorial usage was more common with families that were geographically distributed, within the US and abroad.</p>
+            <p><strong className={classes.emphasis}>#4)</strong> A cultural trend of distributed communities: Online memorial usage was more common with families that were widely distributed geographically, within the US and abroad.</p>
 
-            <p><strong className={classes.emphasis}>#5)</strong> Positive feedback only: When asked about what users disliked about current memorial products, people were very hesitant to give negative feedback. We attributed this to the close association with their loved ones being represented by that product and speaking ill of the product would in turn feel like speaking ill of the departed.</p>
+            <p><strong className={classes.emphasis}>#5)</strong> Positive feedback only: When asked about what users disliked about current memorial products, people were very hesitant to give negative feedback. We attributed this to the close association with their loved ones being represented by that product, and speaking ill of the product would in turn feel like speaking ill of the departed.</p>
 
             <p><strong className={classes.emphasis}>#6)</strong> Websites are temporary</p>
 
@@ -150,7 +152,7 @@ function ProjectEmberlast(props) {
 
             <h3>Defining the User Experience & Interactions:</h3>
 
-            <p>With a clearer idea of the market, the key customers identified, and a sense of the current market offerings, the market research campaign came to an end and the user testing began.  This user testing campaign, similar to the market research work involved over 100 participants taking part of 30-60 min interviews and user test exercises.</p>
+            <p>User testing began with a clear idea of the market, the key customers identified and a sense of the current market offerings.  This involved more than 100 participants taking part in 30-60 minute interviews and online user test exercises.</p>
 
             <p>The three main campaign questions/learning goals:</p>
             <List>
@@ -174,7 +176,7 @@ function ProjectEmberlast(props) {
                             A Tough Lesson in Prototyping Around Death:
                         </Typography>
                         <Typography variant="body2" component="p">
-                            One of the first prototypes I built was focused on exploring interaction focused on celebrating a departed’s hobbies and passions.  As a typical design processes would advocate, prototype early and often to validate ideas.  Unfortunately this prototype was a complete flop.  Not a single users enjoyed the experience nor chose to engage with it beyond a cursory look over.  At first we were surprised but as the feedback rolled in it become clear that users were not interested in celebrating their loved ones with an unpolished experience.  Dealing with death and grief are difficult and users were not willing to engage with those emotions unless there was a clear distinct value and respect for their loved ones.  Although it was a disappointing failure, it certainly encouraged us to move forward with this lesson.
+                            One of the first prototypes I built was focused on celebrating a loved one’s hobbies and passions.  As a typical design process would advocate, prototype early and often to validate ideas.  Unfortunately, this prototype was a complete flop.  It became clear that users were not interested in an unpolished experience.  Dealing with death and grief are difficult, and users were not willing to engage with those emotions unless there was a clear distinct value and respect for their loved ones.  Although it was a disappointing failure, it encouraged us to move forward with this lesson.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -184,7 +186,7 @@ function ProjectEmberlast(props) {
 
             <h3>Mockups & Storyboards:</h3>
 
-            <p>Learning that building rough, interactive prototypes was off the table, I refocused our efforts to validating design ideas and features through more polished mockups and storyboards.  </p>
+            <p>Learning that building rough, interactive prototypes was off the table, I refocused efforts toward validating design ideas and features through more polished mockups and storyboards.</p>
             <ImageContainer
                 image={EmberlastMobile01}
                 imagetwo={EmberlastMobile02}
@@ -213,13 +215,8 @@ function ProjectEmberlast(props) {
                 caption="Some of our final screenshots, produced by our contract artist"
             />
             <h3>A Book:</h3>
-            <p>One of the biggest insights during this phase was how to differentiate ourselves form the competition.  During the market research campaign people had difficulty trusting that websites would be around for an extended period of time, and many people desired memorials to be something less temporal.  My proposed solution for this was to take our online memorial and repurpose the user-submitted content into a physically printed book that would to sold to users.  This idea was almost universally embraced
-in our user testing sessions and become the primary differentiation for us and the competition.</p>
+            <p>During the market research campaign people had difficulty trusting that websites would be around for an extended period of time.  Many participants desired memorials to be something less temporal.  My proposed solution was to take our online memorial and redesign the content into a physically printed book.  This idea was almost universally embraced and became one of the primary original, differentiating features for our product.</p>
 
-
-            {/* <hand off to development> */}
-            {/* </Grid>
-            </Grid> */}
         </ProjectTemplate>
     )
 }

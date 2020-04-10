@@ -20,6 +20,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import withStyles from "@material-ui/core/styles/withStyles";
+import PatentPDF from "../../media/US10140749.pdf"
 
 const useStyles = theme => ({
     section: {
@@ -36,6 +37,9 @@ const useStyles = theme => ({
         justifyContent: 'center',
         display: 'flex',
     },
+    patentLink:{
+        color:theme.palette.secondary.main
+    }
 });
 
 function ProjectIoT(props) {
@@ -49,35 +53,25 @@ function ProjectIoT(props) {
         >
 
             <h2>Introduction:</h2>
-            <p>At Hewlett Packard I was part of the Mechanisms and Design Lab which was charged with developing novel IP that could be integrated or improve HP’s offerings. My research directive was to explore potential data visualization for complex systems, such as large wireless networks and IoT systems.</p>
+            <p>I was part of the Mechanisms and Design Lab team at Hewlett Packard that was charged with developing novel IP to be integrated into or to improve HP’s offerings. My research directive was to explore potential data visualization for complex systems, such as large wireless networks and IoT systems.</p>
 
             <h2>Research Based Design:</h2>
-            <p>Talk about certain research that has been done in the area:  Here is a flow chart breaking down some of the research that was addressed in the initial phase of the project.</p>
+            <p>A flow chart breaking down some of the research addressed in the initial phase of the project.  </p>
             <ImageContainer
                 image={ResearchImage}
                 caption="A breakdown of exisiting research and relevancy to the project"
             />
 
-            <p>While all the details are these prior work would be exhaustive to review here, there were a number of key takeaways:</p>
-
-            <p>  Gero and Kannengiesser define SBF as follows:</p>
+            <p>While the specifics of this work would be too tedious to review here, there were several key takeaways:</p>
             <div className={classes.noteContainer}>
                 <Card variant="outlined" className={classes.cardDark}>
                     <CardContent>
-                        {/* <Typography gutterBottom component='h3'>
-                            A quick note on clinical interviewing about death and grief:
-                    </Typography>
-                        <Typography variant="body2" component="p">
-                            This is a difficult topic for many people to talk about, and especially so with random strangers (myself) over the internet or phone. Obviously as the interview it was critical to bring hefty amount of <strong className={classes.emphasis}>RESPECT</strong> and <strong className={classes.emphasis}>OPEN MINDEDNESS</strong> to the table, and be prepared for tears, as it is the nature of the subject matter. On top of these key tenants, there were a few strategies that helped the process.
-                        <br /><br />
-                        </Typography> */}
-
                         <List>
                             <ListItem>
                                 <ListItemIcon>
                                     <RadioButtonUncheckedIcon fontSize="small" />
                                 </ListItemIcon>
-                                <ListItemText primary="The structure, behavior, function (SBF) ontology is way of organizing complexity. SBF framework is adequate for supporting in-depth learning of a complex system. First, it is able to model the structure of the system, which is often the primary method of understanding for a novice, but it also supports a deeper, interconnected model of the functions and behavior of a system that experts prefer to use for their internal representation [1,2]." />
+                                <ListItemText primary="SBF framework is adequate for supporting in-depth learning of a complex system. First, it is able to model the structure of the system, which is often the primary method of understanding for a novice, but it also supports a deeper, interconnected model of the functions and behavior of a system that experts prefer to use for their internal representation  [1,2]." />
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
@@ -96,68 +90,54 @@ function ProjectIoT(props) {
                     </CardContent>
                 </Card>
             </div>
-{/* “•Function (F) variables: describe the teleology of the object, i.e. what it is for.
-•Behaviour (B) variables: describe the attributes that are derived or expected to be derived from the structure (S) variables of the object, i.e. what it does.
-•Structure (S) variables: describe the components of the object and their relationships,“ [25] */}
-{/* •	
-•	
-•	
-• */}
 
             <h2>Other UI Inspirations:</h2>
 
             <h3>Powers of Ten</h3>
-            <p>One of the driving inspirations for this project was the education classic video “Powers of Ten”.  </p>
+            <p>One of the driving inspirations for this project was the education classic video “Powers of Ten”. </p>
 
-            <p>The 1968 short film “Powers of Ten” by Charles Eames demonstrated the physical scale of objects, starting with humans in a park and zooming-out to the size of the known universe, and zooming-in to the scale of a proton, and visiting incremental steps along the way.  Eames’ film was proven to be an effective tool for students to gain understanding and intuition around scale and relative sizes [5]. </p>
+            <p>The 1968 short film “Powers of Ten” by Charles Eames demonstrated the physical scale of objects, starting with humans in a park and zooming-out to the size of the known universe, and zooming-in to the scale of a proton, while visiting incremental steps along the way.  Eames’ film proved to be an effective tool for students to gain understanding and intuition concerning scale and relative sizes [5]. </p>
 
             <div className={classes.noteContainer}>
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <p>My aim was to apply the same method to visualizing complex networking and IoT systems, allowing users to gain an intuition for a system that might typically be considered more abstract.</p>
-            {/* <EMBED POWERS OF TEN VIDEO https://www.youtube.com/watch?v=0fKBhvDjuy0 >  */}
-
 
             <h3>Contextual UIs (Video Games)</h3>
 
-            <p>Diegetic UI, where the UI is embedded within the digital scene as opposed to an overlay, has been part of game design for many years (and has become mainstream with the prominence of AR & VR).  With complex systems such as IoT networks there is an abundance of data, so much so that the number of graphs and traditional visualizations can be overwhelming.  The novel approach here is to use the same fundamentals of diegetic UI and apply those techniques to diegetic data visualization.  </p>
+            <p>Diegetic UI, where the UI is embedded within the digital scene as opposed to an overlay, has been part of game design for many years (and has become mainstream with the prominence of AR & VR).  With complex systems such as IoT networks there is an abundance of data, so much so that the number of graphs and traditional visualizations can be overwhelming.  The novel approach here is to use the same fundamentals of diegetic UI and apply those techniques to diegetic data visualization. </p>
 
             <ImageContainer
                 image={DeadspaceUI}
                 caption="An example of diegetic UI in Deadspace video game.  Notice the map is part of the environment and the health status is represented as light bars on the character model"
             />
-            {/* <example of deadspace diegetic UI> */}
-
-            {/* < example of my diegetic data visuals> */}
 
             <h2>Prototyping Process</h2>
 
-            {/* <paper prototypes / sketches> */}
-
-            <p>There were a number of challenges with implementing this application due to its complexity and scope.  Initial prototypes were made in Unity3D, due to its gaming orientation, many of the 3D support and operations was already built in.  This prototype was incredibly successful at demonstrating the idea and getting initial feedback.</p>
+            <p>There were numerous challenges implementing this application due to its complexity and scope.  Initial prototypes were made in Unity3D because of its gaming orientation, leveraging 3D support and operations were already built into the software.  This prototype was incredibly successful at demonstrating the idea and soliciting initial feedback.</p>
             <ImageContainer
                 image={Screenshot01}
                 imagetwo={Screenshot02}
                 caption="Campus and building system levels"
             />
-            <p>The next iteration of the concept was around validating technical challenges in creating a more robust platform.  This technical validation was two fold, with A) transitioning the 3D aspects of the program from Unity3D to WebGL, and B) demonstrating what a “full stack” IoT solution would look like.</p>
+            <p>The next iteration of the concept involved validating technical challenges in creating a more robust platform.  This technical validation was two-fold, with A) transitioning the 3D aspects of the program from Unity3D to WebGL, and B) demonstrating what a “full stack” IoT solution would look like.</p>
             <p>From an interface and visual perspective, many of the same designs from the initial Unity3D project were carried over.  Still, this was a long process, even with the use of the BabylonJS framework.</p>
             <ImageContainer
                 image={Screenshot03}
                 imagetwo={Screenshot04}
                 caption="Building floor and HVAC zone sub-system levels"
             />
-            <p>Beyond the visual framework, creating a “full stack” IoT demonstration was a key requirement of the second clickable prototype.  This involved connecting the web app frontend to a backend server that not only served data to the front end but interfaced also was responsible for maintaining the system state (logging data from sensors and calculating states of programmed actuators) and connecting and communicating with networked hardware.  This was prototype backend service went through a number of iterations, particularly determining the most robust communication pipeline (between the frontend application, backend server, and device sensors/actuators) before settling a successful combination of Socket.io and ZeroMQ solution.</p>
+            <p>In order to complete the ‘full stack’ requirement, the web app also needed to be accompanied with a backend server that was responsible for communicating with an IoT network.  This backend application was responsible for maintaining the system state (parsing data from sensors and enforcing states of actuators).  The backend service went through a number of iterations, resulting in a robust communication pipeline (between the frontend application, backend server, and device sensors/actuators) based on a combination of Socket.io and ZeroMQ  protocols.</p>
             <ImageContainer
                 image={Screenshot05}
                 imagetwo={Screenshot06}
                 caption="Air handling unit component and coolant valve sub-component levels"
             />
             <h2>Results:</h2>
-            <p>The goal of this project was to generate new IP for HPE future projects.  Once the full stack concept was proven with the second iteration of a clickable prototype, the project documentation was finalized and set up for a patent application.  </p>
+            <p>The goal of this project was to generate new IP for HPE future projects.  Once the full stack concept was proven with the second iteration of a clickable prototype, the project documentation was finalized and set up for a patent application.</p>
 
-            <p>The patent application was approved and I was awarded authorship of patent #abc</p>
+            <p>The patent application was approved and I was awarded authorship of patent <a className={classes.patentLink} href={PatentPDF} target="_blank">#10140749</a></p>
             {/* Link to Patent #abc PDF: */}
 
             <h2>Resources:</h2>
