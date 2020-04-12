@@ -19,7 +19,8 @@ import {
   Route,
   Redirect,
   useRouteMatch,
-  useParams
+  useParams,
+  HashRouter
 } from "react-router-dom";
 
 const theme = createMuiTheme({
@@ -38,17 +39,17 @@ const theme = createMuiTheme({
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter  basename={"/"}>
       <Switch>
-        <Route path="/projects">
+        <Route path={"/projects"}>
           <Projects />
         </Route>
-        <Route path="/">
+        <Route path={"/"}>
           <Home />
         </Route>
       </Switch>
       {/* </div> */}
-    </Router>
+    </HashRouter>
   );
 }
 
@@ -82,7 +83,7 @@ function Projects() {
         <Project />
       </Route>
       <Route path={`${match.path}`}>
-        <Redirect to="/" />
+        <Redirect to={"/"} />
       </Route>
     </Switch>
   );
@@ -117,6 +118,6 @@ function Project() {
         </ThemeProvider>
       )
     default:
-      return <Redirect to="/" />
+      return <Redirect to={"/"}  />
   }
 }
