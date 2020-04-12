@@ -15,6 +15,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles((theme) => ({
     myNavbar: {
@@ -179,6 +180,7 @@ export default function Navbar() {
                             aria-haspopup="true"
                             onClick={handleDesktopProjectMenuOpen}>
                             Projects
+                            <ArrowDropDownIcon/>
                         </Button>
                         <Button component={Link} to={'/#about'}>About</Button>
                         <Button component={Link} to={'/#contact'}>Contact</Button>

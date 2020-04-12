@@ -78,16 +78,17 @@ const useTreeItemStyles = makeStyles((theme) => ({
       '&:focus > $content $label, &:hover > $content $label, &$selected > $content $label': {
         backgroundColor: 'transparent',
       },
+      fontWeight:"bolder",
     },
     content: {
       color: theme.palette.text.secondary,
       borderTopRightRadius: theme.spacing(2),
       borderBottomRightRadius: theme.spacing(2),
       paddingRight: theme.spacing(1),
-      fontWeight: theme.typography.fontWeightMedium,
-      '$expanded > &': {
-        fontWeight: theme.typography.fontWeightRegular,
-      },
+      // fontWeight: theme.typography.fontWeightMedium,
+      // '$expanded > &': {
+      //   fontWeight: theme.typography.fontWeightRegular,
+      // },
     },
     group: {
       marginLeft: 0,
@@ -104,14 +105,14 @@ const useTreeItemStyles = makeStyles((theme) => ({
     },
     labelRoot: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'left',
       padding: theme.spacing(0.5, 0),
     },
     labelIcon: {
       marginRight: theme.spacing(1),
     },
     labelText: {
-      fontWeight: 'inherit',
+      // fontWeight: 'inherit',
       flexGrow: 1,
     },
   }));
@@ -177,7 +178,7 @@ function IntroSectionAuxDiv(props){
                             labelText="Interaction Design"
                             labelIcon={ToysIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#449DD1"
                             bgColor="#e8f0fe"
                             />
                             <StyledTreeItem
@@ -185,7 +186,7 @@ function IntroSectionAuxDiv(props){
                             labelText="Data Visualization"
                             labelIcon={InsertChartIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#449DD1"
                             bgColor="#e8f0fe"
                             />
                             <StyledTreeItem
@@ -193,7 +194,7 @@ function IntroSectionAuxDiv(props){
                             labelText="Product Design & Validation"
                             labelIcon={FilterCenterFocusIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#449DD1"
                             bgColor="#e8f0fe"
                             />
                         </StyledTreeItem>
@@ -203,7 +204,7 @@ function IntroSectionAuxDiv(props){
                             labelText="Javascript, Python, Dart"
                             labelIcon={LanguageIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#F26430"
                             bgColor="#e8f0fe"
                             />
                             <StyledTreeItem
@@ -211,7 +212,7 @@ function IntroSectionAuxDiv(props){
                             labelText="Node.js / Meteor"
                             labelIcon={PermDataSettingIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#F26430"
                             bgColor="#e8f0fe"
                             />
                             <StyledTreeItem
@@ -219,7 +220,7 @@ function IntroSectionAuxDiv(props){
                             labelText="React, Blaze, Bootstrap, Material UI"
                             labelIcon={PersonalVideoIcon}
                             labelInfo="90"
-                            color="#1a73e8"
+                            color="#F26430"
                             bgColor="#e8f0fe"
                             />
                     </StyledTreeItem>
@@ -229,7 +230,7 @@ function IntroSectionAuxDiv(props){
                         labelText="Market Validation"
                         labelIcon={StoreIcon}
                         labelInfo="90"
-                        color="#1a73e8"
+                        color="#97CC04"
                         bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
@@ -237,16 +238,16 @@ function IntroSectionAuxDiv(props){
                         labelText="Clinical Interviews & Surveys"
                         labelIcon={PeopleAltIcon}
                         labelInfo="2,294"
-                        color="#e3742f"
-                        bgColor="#fcefe3"
+                        color="#97CC04"
+                        bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
                         nodeId="12"
                         labelText="A/B & User Testing"
                         labelIcon={TonalityIcon}
                         labelInfo="733"
-                        color="#3c8039"
-                        bgColor="#e6f4ea"
+                        color="#97CC04"
+                        bgColor="#e8f0fe"
                         />
                     </StyledTreeItem>
                     </TreeView>

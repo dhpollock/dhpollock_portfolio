@@ -25,7 +25,10 @@ const useStyles = theme => ({
         textAlign: 'left',
     },
 });
-
+const lightboxOptions={
+    enablePanzoom:false,
+    autoplaySpeed:0,
+}
 function ProjectTemplate(props) {
     const classes = props.classes
     return (
@@ -41,7 +44,7 @@ function ProjectTemplate(props) {
                             </div>
                         </div>
                         <div className={classes.bodySection}>
-                        <SRLWrapper>
+                        <SRLWrapper options={lightboxOptions}>
                             {props.children}
                             </SRLWrapper>
                         </div>

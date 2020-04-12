@@ -12,7 +12,7 @@ import Footer from "../common/Footer/Footer"
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
+import ScrollToTop from '../common/ScrollToTop'
 import {
   BrowserRouter as Router,
   Switch,
@@ -78,6 +78,7 @@ function Projects() {
   return (
     <Switch>
       <Route path={`${match.path}/:projectId`}>
+      <ScrollToTop />
         <Project />
       </Route>
       <Route path={`${match.path}`}>
