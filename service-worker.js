@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dhpollock_portfolio/precache-manifest.5ac5dfe3010fb239ba989ce0c973c824.js"
+  "/dhpollock_portfolio/precache-manifest.832bce58e567c3e5d6637dcbe1e0cf7b.js"
 );
 
 self.addEventListener('message', (event) => {
